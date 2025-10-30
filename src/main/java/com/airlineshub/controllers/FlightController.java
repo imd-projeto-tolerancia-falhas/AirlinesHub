@@ -16,7 +16,7 @@ public class FlightController {
         this.flightService = flightService;
     }
 
-    @GetMapping(value = "/flight/${flight}/${day}")
+    @GetMapping(value = "/flight")
     public ResponseEntity<?> getFlight(@RequestParam String flight, @RequestParam LocalDate day) {
         return ResponseEntity.ok(flightService.getFlight(flight, day));
     }
